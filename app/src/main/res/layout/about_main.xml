@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".AboutActivity"
+    >
+
+    <TextView
+        android:id="@+id/judul"
+        android:layout_marginTop="30dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textStyle="bold"
+        android:textSize="22sp"
+        android:textColor="#09A4E1"
+        android:layout_centerHorizontal="true"
+        android:text="Gambar Vector"/>
+
+
+    <ImageView
+        android:id="@+id/gambar"
+        android:layout_gravity="center"
+        android:layout_marginTop="15dp"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/judul"
+        android:layout_marginBottom="5dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:scaleType="fitXY"
+        android:src="@mipmap/icon"/>
+
+    <TextView
+        android:id="@+id/isi_news"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:textSize="15sp"
+        android:layout_below="@id/gambar"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:textStyle="normal"
+        android:text="  lorem ipsum dolor manganan pemain volley. Yanu Gads The Lord of Thunder. lorem ipsum dolor manganan pemain volley. Yanu Gads The Lord of Thunder. lorem ipsum dolor manganan pemain volley. Yanu Gads The Lord of Thunder. lorem ipsum dolor manganan pemain volley. Yanu Gads The Lord of Thunder. lorem ipsum dolor manganan pemain volley. Yanu Gads The Lord of Thunder. lorem ipsum dolor manganan pemain volley. Yanu Gads The Lord of Thunder. lorem ipsum dolor manganan pemain volley. Yanu Gads The Lord of Thunder. lorem ipsum dolor manganan pemain volley. Yanu Gads The Lord of Thunder. lorem ipsum dolor manganan pemain volley. Yanu Gads The Lord of Thunder. lorem ipsum dolor manganan pemain volley. Yanu Gads The Lord of Thunder. lorem ipsum dolor manganan pemain volley. Yanu Gads The Lord of Thunder"
+        />
+
+</RelativeLayout>
