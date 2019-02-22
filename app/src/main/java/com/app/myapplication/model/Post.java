@@ -12,7 +12,7 @@ public class Post {
     }
 
     public String getBody() {
-        return body;
+        returasdasdasdn body;
     }
 
     public void setBody(String body) {
