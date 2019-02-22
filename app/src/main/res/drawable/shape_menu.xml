@@ -5,9 +5,4 @@
         android:endColor="#30E3CA"
         android:startColor="#25BED4"
         android:type="linear" />
-    <corners
-        android:radius="20dp">
-
-    </corners>
-
 </shape>

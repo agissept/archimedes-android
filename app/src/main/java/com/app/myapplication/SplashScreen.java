@@ -5,6 +5,8 @@ import android.os.Bundle;
 import android.os.Handler;
 import android.support.v7.app.AppCompatActivity;
 
+import com.app.myapplication.home.MainActivity;
+
 public class SplashScreen extends AppCompatActivity {
     private static int splashInterval = 3000;
 

@@ -1,10 +1,11 @@
-package com.app.myapplication;
+package com.app.myapplication.home;
 
 import android.os.Build;
 import android.os.Bundle;
 import android.content.Intent;
 import android.support.annotation.NonNull;
 import android.support.annotation.RequiresApi;
+import android.support.v4.widget.SwipeRefreshLayout;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.support.design.widget.NavigationView;
@@ -17,6 +18,9 @@ import android.view.MenuItem;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.app.myapplication.AboutActivity;
+import com.app.myapplication.R;
+import com.app.myapplication.SettingsActivity;
 import com.app.myapplication.home.PostAdapter;
 import com.app.myapplication.model.Post;
 import com.app.myapplication.model.PostResponse;
@@ -30,9 +34,10 @@ import retrofit2.Callback;
 import retrofit2.Response;
 
 public class MainActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener{
-    Intent i;
+
     RecyclerView recyclerView;
     PostAdapter adapter;
+    SwipeRefreshLayout swipe;
 
     @RequiresApi(api = Build.VERSION_CODES.O)
     @Override
@@ -55,6 +60,14 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         recyclerView.setHasFixedSize(true);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
 
+        swipe = findViewById(R.id.swipe);
+        swipe.setOnRefreshListener(new SwipeRefreshLayout.OnRefreshListener() {
+            @Override
+            public void onRefresh() {
+                loadPost();
+            }
+        });
+
         loadPost();
     }
 
@@ -72,10 +85,10 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
                         adapter = new PostAdapter(listPost);
                         recyclerView.setAdapter(adapter);
                     }
-                    //swipe.setRefreshing(false);
+                    swipe.setRefreshing(false);
                 }else {
                     Toast.makeText(getApplicationContext(), "Data siswa dimuat", Toast.LENGTH_SHORT).show();
-                    //swipe.setRefreshing(false);
+                    swipe.setRefreshing(false);
                 }
             }
 

@@ -32,7 +32,6 @@ public class PostAdapter extends RecyclerView.Adapter<PostAdapter.ViewHolder> {
     @Override
     public void onBindViewHolder(@NonNull PostAdapter.ViewHolder viewHolder, int i) {
         final Post p = listPost.get(i);
-      //  viewHolder.number.setText(String.valueOf(i+1));
         viewHolder.title.setText(p.getTitle());
         viewHolder.card_view.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -40,6 +39,8 @@ public class PostAdapter extends RecyclerView.Adapter<PostAdapter.ViewHolder> {
                 Intent i = new Intent(view.getContext(), DetailActivity.class);
                 i.putExtra("title", p.getTitle());
                 i.putExtra("body", p.getBody());
+                i.putExtra("image", p.getImage());
+                i.putExtra("date", p.getDate());
                 view.getContext().startActivity(i);
             }
         });
