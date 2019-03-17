@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    >
+
+    <activity
+        android:id="@+id/detailActivity"
+        android:name="com.app.myapplication.detail.DetailActivity"
+        android:label="detail_activity"
+        tools:layout="@layout/detail_activity" />
+    <activity
+        android:id="@+id/aboutActivity"
+        android:name="com.app.myapplication.AboutActivity"
+        android:label="about_main"
+        tools:layout="@layout/about_main" />
+    <activity
+        android:id="@+id/mainActivity2"
+        android:name="com.app.myapplication.home.MainActivity"
+        android:label="activity_main"
+        tools:layout="@layout/activity_main" />
+</navigation>

@@ -1,27 +1,26 @@
 package com.app.myapplication.home;
 
+import android.content.Intent;
 import android.os.Build;
 import android.os.Bundle;
-import android.content.Intent;
 import android.support.annotation.NonNull;
 import android.support.annotation.RequiresApi;
-import android.support.v4.widget.SwipeRefreshLayout;
-import android.support.v7.widget.LinearLayoutManager;
-import android.support.v7.widget.RecyclerView;
 import android.support.design.widget.NavigationView;
 import android.support.v4.view.GravityCompat;
 import android.support.v4.widget.DrawerLayout;
+import android.support.v4.widget.SwipeRefreshLayout;
 import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AppCompatActivity;
+import android.support.v7.widget.LinearLayoutManager;
+import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.Toolbar;
 import android.view.MenuItem;
-import android.widget.TextView;
 import android.widget.Toast;
 
 import com.app.myapplication.AboutActivity;
+
 import com.app.myapplication.R;
 import com.app.myapplication.SettingsActivity;
-import com.app.myapplication.home.PostAdapter;
 import com.app.myapplication.model.Post;
 import com.app.myapplication.model.PostResponse;
 import com.app.myapplication.rest.ApiClient;
@@ -123,8 +122,6 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         } else if (id == R.id.nav_about) {
             Intent i = new Intent(this, AboutActivity.class);
             startActivity(i);
-
-        } else if (id == R.id.nav_manage) {
 
         }
 
